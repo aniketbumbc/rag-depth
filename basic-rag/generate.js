@@ -17,7 +17,6 @@ Rules:
 
 export async function answerStream(question, onToken) {
   const hits = await retrieve(question);
-  console.log('hits', hits.length);
 
   if (hits.length === 0) {
     onToken("I don't know based on the provided documents.");
@@ -25,8 +24,6 @@ export async function answerStream(question, onToken) {
   }
 
   const context = buildContext(hits);
-
-  console.log('context', context);
 
   const stream = await openai.chat.completions.create({
     model: CHAT_MODEL,
