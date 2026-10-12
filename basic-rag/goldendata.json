@@ -1,0 +1,295 @@
+[
+  {
+    "id": "q1",
+    "question": "How many nights and days is the Paris-Swiss Delight tour?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 1
+      }
+    ],
+    "referenceAnswer": "The Paris-Swiss Delight tour is 9 nights and 10 days (9N10D): 3 nights in Paris and 6 nights in Switzerland."
+  },
+  {
+    "id": "q2",
+    "question": "Which hotels are used in Paris and Switzerland?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 1
+      },
+      {
+        "source": "data-1.pdf",
+        "page": 2
+      },
+      {
+        "source": "data-1.pdf",
+        "page": 3
+      }
+    ],
+    "referenceAnswer": "Ibis Styles Paris Vélizy (or a similar 3* hotel) in Paris, and Ibis Zurich Airport Messe (or a similar 3* hotel) in Switzerland."
+  },
+  {
+    "id": "q3",
+    "question": "What happens on the first day after arriving in Paris?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 2
+      }
+    ],
+    "referenceAnswer": "The tour manager greets you on arrival, you are transferred to the hotel, and in the evening you have a hot Indian dinner before an overnight stay in Paris."
+  },
+  {
+    "id": "q4",
+    "question": "Up to which level of the Eiffel Tower do we go?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 2
+      }
+    ],
+    "referenceAnswer": "Guests go up to the 2nd level of the Eiffel Tower."
+  },
+  {
+    "id": "q5",
+    "question": "Is there a river cruise in Paris?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 2
+      }
+    ],
+    "referenceAnswer": "Yes, a Seine River Cruise is included on Day 2 after the Paris city tour."
+  },
+  {
+    "id": "q6",
+    "question": "What is the alternative to visiting Versailles Gardens on Day 3?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 2
+      }
+    ],
+    "referenceAnswer": "Guests can instead take an optional tour of Disneyland Paris."
+  },
+  {
+    "id": "q7",
+    "question": "What is the Titlis Cliff Walk?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 3
+      }
+    ],
+    "referenceAnswer": "It is a suspension bridge at the top of Mt. Titlis, described as Europe's highest suspension bridge."
+  },
+  {
+    "id": "q8",
+    "question": "What do we see in Lucerne?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 3
+      }
+    ],
+    "referenceAnswer": "Lucerne's lake shore, the flower-adorned Chapel Bridge and the Lion Monument."
+  },
+  {
+    "id": "q9",
+    "question": "How high does the Jungfraujoch excursion go?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 3
+      }
+    ],
+    "referenceAnswer": "The cogwheel train climbs to about 11,000 feet, to the highest railway station in Europe."
+  },
+  {
+    "id": "q10",
+    "question": "Where does the GoldenPass line journey start from?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 4
+      }
+    ],
+    "referenceAnswer": "The GoldenPass line journey starts from Gstaad and descends toward Lake Geneva."
+  },
+  {
+    "id": "q11",
+    "question": "What landmarks are seen during the Geneva orientation tour?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 4
+      }
+    ],
+    "referenceAnswer": "The United Nations and the Palais des Nations, with views of Lake Geneva, the Jura Mountains and the French Alps."
+  },
+  {
+    "id": "q12",
+    "question": "Is the Rhine Falls boat ride included?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 4
+      }
+    ],
+    "referenceAnswer": "No. The boat ride at Rhine Falls is optional and at your own expense."
+  },
+  {
+    "id": "q13",
+    "question": "What is the tour price for an adult?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "INR 1,99,750 per adult. Child with bed is INR 1,89,750, child without bed INR 1,79,750, infant INR 24,750 and single INR 2,44,750."
+  },
+  {
+    "id": "q14",
+    "question": "What are the departure dates in May 2026?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "May 13 and May 29, 2026."
+  },
+  {
+    "id": "q15",
+    "question": "How much does the optional Mt. Jungfrau tour cost for an adult?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "Rs. 20,750 per adult (Rs. 18,750 per child from 6 years, Rs. 2,000 per infant up to 6 years)."
+  },
+  {
+    "id": "q16",
+    "question": "Is visa included in the package?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "Yes, visa is listed under inclusions."
+  },
+  {
+    "id": "q17",
+    "question": "Up to what age is travel insurance covered?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "Insurance is included for travellers up to 59 years only."
+  },
+  {
+    "id": "q18",
+    "question": "What is excluded from the tour price?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 5
+      }
+    ],
+    "referenceAnswer": "GST at 5%, TCS at 5%, tips (Euro 40 per person) and personal expenses such as porterage, laundry, drinks and telephone charges."
+  },
+  {
+    "id": "q19",
+    "question": "How much is the booking amount and when is the balance due?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 6
+      }
+    ],
+    "referenceAnswer": "The booking amount is INR 75,000 per person, and the balance must be paid 90 days before the tour start date."
+  },
+  {
+    "id": "q20",
+    "question": "What is the cancellation charge if I cancel 45 days before departure?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 6
+      }
+    ],
+    "referenceAnswer": "50% of the tour cost (the charge for cancellations 31 to 60 days before departure)."
+  },
+  {
+    "id": "q21",
+    "question": "How much baggage can I carry on the bus?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 6
+      }
+    ],
+    "referenceAnswer": "Two pieces: one check-in bag and one hand bag. Extra baggage depends on available space and costs extra."
+  },
+  {
+    "id": "q22",
+    "question": "Is TCS refundable?",
+    "answerable": true,
+    "expectedSources": [
+      {
+        "source": "data-1.pdf",
+        "page": 7
+      }
+    ],
+    "referenceAnswer": "No. TCS is non-refundable and can be claimed through income tax returns."
+  },
+  {
+    "id": "q23",
+    "question": "Which airline operates the flights for this tour?",
+    "answerable": false,
+    "expectedSources": [],
+    "referenceAnswer": null
+  },
+  {
+    "id": "q24",
+    "question": "Is there free Wi-Fi on the coach?",
+    "answerable": false,
+    "expectedSources": [],
+    "referenceAnswer": null
+  },
+  {
+    "id": "q25",
+    "question": "Do you offer senior citizen discounts?",
+    "answerable": false,
+    "expectedSources": [],
+    "referenceAnswer": null
+  }
+]

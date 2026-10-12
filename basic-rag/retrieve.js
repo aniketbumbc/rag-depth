@@ -20,8 +20,8 @@ export const vectorStore = await PGVectorStore.initialize(embeddings, {
   distanceStrategy: 'cosine',
 });
 
-export async function retrieve(question) {
-  const results = await vectorStore.similaritySearch(question, 10);
+export async function retrieve(question, { k = 10 } = {}) {
+  const results = await vectorStore.similaritySearch(question, k);
   //console.log(results);
   return results;
 }
