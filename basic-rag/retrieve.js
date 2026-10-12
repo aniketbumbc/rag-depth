@@ -5,7 +5,7 @@ dotenv.config();
 
 const embeddings = new OpenAIEmbeddings({ model: 'text-embedding-3-small' });
 
-const vectorStore = await PGVectorStore.initialize(embeddings, {
+export const vectorStore = await PGVectorStore.initialize(embeddings, {
   postgresConnectionOptions: {
     connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false },
@@ -20,9 +20,8 @@ const vectorStore = await PGVectorStore.initialize(embeddings, {
   distanceStrategy: 'cosine',
 });
 
-const results = await vectorStore.similaritySearch(
-  'How long do refunds take?',
-  1,
-);
-
-console.log(results);
+export async function retrieve(question) {
+  const results = await vectorStore.similaritySearch(question, 10);
+  //console.log(results);
+  return results;
+}
