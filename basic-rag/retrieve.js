@@ -1,27 +1,21 @@
-import { PGVectorStore } from '@langchain/community/vectorstores/pgvector';
-import { OpenAIEmbeddings } from '@langchain/openai';
-import dotenv from 'dotenv';
-dotenv.config();
+import { pool, toVec } from './db.js';
+import { embedTexts } from './embed.js';
 
-const embeddings = new OpenAIEmbeddings({ model: 'text-embedding-3-small' });
+// Raw SQL instead of PGVectorStore so we get ids + cosine scores and can filter by tenant.
+// Rows come back as { id, pageContent, metadata, score }, the same shape as keywordSearch.
+export async function retrieve(
+  question,
+  { tenantId = 'acme', k = 10, minScore = 0 } = {},
+) {
+  const [vec] = await embedTexts([question]);
 
-export const vectorStore = await PGVectorStore.initialize(embeddings, {
-  postgresConnectionOptions: {
-    connectionString: process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false },
-  },
-  tableName: 'chunksragpractice',
-  columns: {
-    idColumnName: 'id',
-    vectorColumnName: 'embedding',
-    contentColumnName: 'content',
-    metadataColumnName: 'metadata',
-  },
-  distanceStrategy: 'cosine',
-});
-
-export async function retrieve(question, { k = 10 } = {}) {
-  const results = await vectorStore.similaritySearch(question, k);
-  //console.log(results);
-  return results;
+  const { rows } = await pool.query(
+    `SELECT id, content AS "pageContent", metadata, 1 - (embedding <=> $1::vector) AS score
+     FROM chunksragpractice
+     WHERE tenant_id = $2 AND 1 - (embedding <=> $1::vector) >= $3
+     ORDER BY embedding <=> $1::vector
+     LIMIT $4`,
+    [toVec(vec), tenantId, minScore, k],
+  );
+  return rows;
 }
