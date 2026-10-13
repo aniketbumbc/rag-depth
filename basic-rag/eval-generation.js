@@ -12,7 +12,9 @@ export async function evalGeneration() {
   const rows = [];
 
   for (const g of golden) {
-    const { answer, sources } = await answerQuestion(g.question);
+    const { answer, sources } = await answerQuestion(g.question, {
+      rerank: false, // Cohere trial key: 10 calls/min
+    });
     const context = buildContext(sources);
 
     // Unanswerable questions have no reference: the correct behaviour is to refuse.
