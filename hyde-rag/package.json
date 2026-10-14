@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ingest": "node src/ingest.js",
+    "ask": "node src/ask.js",
     "dev": "node index.js"
   },
   "keywords": [],
