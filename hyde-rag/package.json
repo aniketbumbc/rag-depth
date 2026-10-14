@@ -19,6 +19,7 @@
     "@langchain/core": "^1.2.17",
     "@langchain/openai": "^1.6.2",
     "@langchain/textsplitters": "^1.0.2",
+    "@opendocsg/pdf2md": "^0.3.4",
     "@supabase/server": "^1.9.1",
     "ai": "^7.0.138",
     "dotenv": "^18.0.7",
