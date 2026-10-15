@@ -9,6 +9,7 @@
     "ingest": "node src/ingest.js",
     "ask": "node src/ask.js",
     "dev": "node index.js",
+    "serve": "node src/server.js",
     "ask:self": "node src/ask-self.js"
   },
   "keywords": [],
@@ -25,7 +26,9 @@
     "@opendocsg/pdf2md": "^0.3.4",
     "@supabase/server": "^1.9.1",
     "ai": "^7.0.138",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.7",
+    "express": "^5.3.0",
     "langchain": "^1.5.16",
     "openai": "^7.32.0",
     "pdf-parse": "^2.4.5",

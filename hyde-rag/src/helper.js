@@ -30,3 +30,23 @@ export async function chatJSON(system, user, fallback) {
     return fallback;
   }
 }
+
+export async function chatStream(
+  messages,
+  { temperature = 0, onToken, signal } = {},
+) {
+  const stream = await openai.chat.completions.create(
+    { model: MODEL, temperature, messages, stream: true },
+    { signal },
+  );
+
+  let full = '';
+  for await (const part of stream) {
+    const t = part.choices[0]?.delta?.content;
+    if (t) {
+      full += t;
+      onToken?.(t);
+    }
+  }
+  return full;
+}
